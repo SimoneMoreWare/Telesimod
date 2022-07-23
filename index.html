@@ -7,17 +7,24 @@
 
 		<script type="text/javascript" src="js/CandidoSimone_orario.js"></script>
 	    <script type="text/javascript" src="js/CandidoSimone_blink.js"></script>
+	    <script type="text/javascript" src="js/sendvalue.js"></script>
 
 		<title> TeLeSimod.it | Portfolio Simone Candido</title>
 	</head>
 	
 	<body class="bg-black" onload="OrologioScorrevole()">
+			
 		<div class="container mx-auto md:px-20">
 			<div class="c-header flex justify-between items-center align-middle text-center py-3 px-3 md:px-0">
 				<div class="flex w-1/2 justify-start">
 					<a href="index.html" style="display:flex;"><img src="img/home.svg" class="mr-3"></a>
 				</div>
-				
+				<div style="display: flex; 	justify-content: space-between; padding-top: 4px; padding-right: 200px;" >
+					<input style=" margin:0; height:30px;  width:40px; border: 2px solid green;  background-color: #282625; color: white;			  " id="refpage" type="text" name="text">
+					<button style="margin:0; height:30px; 	background-color:#282625; border: 2px solid green; color:white; " type="button" onclick=refpage()>VAI</button>
+				</div>
+				  
+					<script src="js/sendvalue.js"></script>
 				<div class="flex justify-end">
 					<span style="text-align: left;" class="inline text-white text-xs lg:text-2xl">TELEVIDEO &nbsp;</span>
 					<span style="text-align: left;" class="inline text-white text-xs lg:text-2xl" id="orologio"></span>
@@ -26,7 +33,7 @@
 			
 			<!-- LOGO -->
 	
-			<div class="c-logo flex justify-center align-middle text-center relative">
+			<div class="c-logo flex justify-center align-middle text-center relative" style="  text-align: center;">
 				<div class="h-2/3 w-full bg-tele-blue absolute"></div>
 				<a href="index.html"><img src="img/logo1.png" alt="" class="z-10 px-6 pt-5"></a>
 			</div>
