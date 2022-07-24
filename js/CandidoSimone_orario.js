@@ -40,7 +40,7 @@ function addZero(i) {
 				giorno="Sa";
 				break;
 				
-				case 7:
+				case 0:
 				giorno="Do";
 				break;
 						}

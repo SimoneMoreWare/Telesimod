@@ -36,6 +36,10 @@ function refpage() {
         case '110':
         window.location.href = "https://drive.google.com/file/d/1ANVWqTSd2ifxHXZ7V_Z5zY4We8mdBveH/view?usp=sharing";
         break;
+        default:
+        window.location.href = "error404.html";
+        break;
+
             }
 
 

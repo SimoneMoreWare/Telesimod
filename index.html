@@ -4,6 +4,7 @@
 		
 		<link rel="stylesheet" href="css/candidosimone.css">
 		<link rel="icon" href="img/favicon.ico" />
+		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
 		<script type="text/javascript" src="js/CandidoSimone_orario.js"></script>
 	    <script type="text/javascript" src="js/CandidoSimone_blink.js"></script>
@@ -26,8 +27,8 @@
 				  
 					<script src="js/sendvalue.js"></script>
 				<div class="flex justify-end">
-					<span style="text-align: left;" class="inline text-white text-xs lg:text-2xl">TELEVIDEO &nbsp;</span>
-					<span style="text-align: left;" class="inline text-white text-xs lg:text-2xl" id="orologio">22/03/2020 11:58:49</span>
+					<span style="text-align: left; font-size: 16px;" class="inline text-white text-xs lg:text-2xl">TELESIMOD &nbsp;</span>
+					<span style="text-align: left; font-size: 16px;" class="inline text-white text-xs lg:text-2xl" id="orologio">22/03/2020 11:58:49</span>
 				</div>
 			</div>
 			
@@ -35,7 +36,7 @@
 	
 			<div class="c-logo flex justify-center align-middle text-center relative" style="  text-align: center;">
 				<div class="h-2/3 w-full bg-tele-blue absolute"></div>
-				<a href="index.html"><img src="img/logo1.png" alt="" class="z-10 px-6 pt-5"></a>
+				<a href="index.html"><img src="img/logo1.png" style="padding-right: 10px;"alt="" class="z-10 px-6 pt-5"></a>
 			</div>
 			
             <!-- SUB-HEADER -->
@@ -199,7 +200,7 @@
 			
 			
 			<a  style="display:block;" href="https://www.canva.com/design/DAE5zUxmb3w/pqhQ-u14eqhPaHc0cIeYGA/view?utm_content=DAE5zUxmb3w&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" target="_blank" class="bg-tele-blue p-1 m-1 text-white lg:text-2xl text-center"><p  script="js/blink.js" id="blink" class="p-1 m-1 text-white lg:text-2xl text-center">Come AI genera opere d'arte <span class="text-tele-green text-lg md:text-4xl">86</p></span></a>
-			
+            <span class="blue whitebg" v-if="progress < 100">Loading {{ progress}} / 100</span>
 			<!-- FOOTER -->
 			
 			<div class="flex items-center sm:flex-row justify-between align-middle py-4 px-4">
