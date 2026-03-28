@@ -225,22 +225,17 @@ html {
 		z-index: -1;
 	}
 
-/* ══════════════════════════════════════════════════════
-   MOBILE RESPONSIVE — aggiunto per smartphone
-   Desktop (≥992px): invariato, fit.js scala come prima
-   ══════════════════════════════════════════════════════ */
-
 @media (max-width: 991px) {
 
-  /* 1 ─ Scroll verticale, niente overflow orizzontale */
+  /* 1 ─ Scroll verticale, reset dimensioni */
   body {
     overflow-y: auto !important;
     overflow-x: hidden !important;
     height: auto !important;
     width: 100% !important;
+    background-color: #000; /* Assicura il nero sullo scroll */
   }
 
-  /* 2 ─ Reset scaling fit.js */
   .container {
     transform: none !important;
     position: static !important;
@@ -248,57 +243,82 @@ html {
     top: auto !important;
     max-width: 100% !important;
     width: 100% !important;
-    padding: 0 8px !important;
+    padding: 0 12px !important; /* Leggermente più margine laterale */
     box-sizing: border-box;
     overflow-x: hidden;
   }
 
-  /* 3 ─ Font base ridotto per leggibilità compatta */
   html { font-size: 10px; }
 
-  /* 4 ─ Logo compatto */
-  .c-logo img { max-height: 46px !important; }
+  /* 2 ─ HEADER ARMONIZZATO */
+  .c-header {
+    padding: 1rem 0 !important; /* Più respiro verticale */
+  }
+  
+  /* Nascondiamo "TELESIMOD" testuale (c'è già il logo sotto) per fare spazio */
+  .c-header span.inline.text-white:not(#orologio) {
+    display: none !important; 
+  }
+  
+  /* Rimpiccioliamo leggermente l'input e l'orologio */
+  #refpage { width: 35px !important; padding: 0 2px !important;}
+  #orologio { 
+    font-size: 0.75rem !important; 
+    margin-left: 5px;
+  }
+  
+  /* Bottoni lingua più compatti */
+  #btn-it, #btn-en {
+    padding: 2px 4px !important;
+    font-size: 9px !important;
+  }
 
-  /* 5 ─ Sub-header: padding ridotto ma rimane in riga */
-  .md\:p-8 { padding: 0.5rem 0.75rem !important; }
+  /* 3 ─ LOGO */
+  .c-logo img { max-height: 42px !important; padding-top: 10px !important; }
 
-  /* 6 ─ Content area principale: impila verticalmente (main → sidebar) */
+  /* 4 ─ SUB-HEADER (HOT PROJECT) */
+  .md\:p-8 { padding: 0.6rem !important; font-size: 0.85rem !important; }
+  .flex-col.md\:flex-row.mt-4 {
+    gap: 8px; /* Distanzia le etichette */
+  }
+
+  /* 5 ─ CONTENT AREA MAIN */
   .lg\:flex-row { flex-direction: column !important; }
+  .lg\:w-2\/3 { width: 100% !important; margin: 0 !important; }
 
-  /* 7 ─ Main column e sidebar a larghezza piena */
-  .lg\:w-2\/3 { width: 100% !important; }
+  /* 6 ─ SIDEBAR LINKS: Griglia 2 colonne pulita */
   .w-1\/3 {
     width: 100% !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr;
-    gap: 2px;
+    gap: 6px;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
-
-  /* 8 ─ Sidebar links: compatti nella griglia 2 colonne */
+  
   .text-left.text-lg {
-    font-size: 0.75rem !important;
-    padding: 0.4rem 0.5rem !important;
-    line-height: 1.4 !important;
+    font-size: 0.65rem !important;
+    padding: 0.5rem !important;
+    line-height: 1.3 !important;
+    white-space: nowrap; /* Evita a capo strani */
+    overflow: hidden; 
+    text-overflow: ellipsis; /* Puntini se il testo sborda */
   }
 
-  /* 9 ─ Header: orologio e brand dimensionati */
-  #orologio { font-size: 0.7rem !important; }
-
-  /* 10 ─ Testo disclaimer: va a capo correttamente */
+  /* 7 ─ DISCLAIMER E FOOTER */
   #blink {
     white-space: normal !important;
     overflow: visible !important;
-    font-size: 0.75rem !important;
+    font-size: 0.8rem !important;
+    padding: 12px !important;
+    line-height: 1.5;
   }
-
-  /* 11 ─ Footer: va a capo, non trabocca */
-  .py-4.px-4 h1,
-  h1.text-white {
+  
+  .py-4.px-4 h1, h1.text-white {
     white-space: normal !important;
-    font-size: 0.7rem !important;
-    word-break: break-all;
+    font-size: 0.75rem !important;
+    word-break: normal !important; /* Evita che le parole si spezzino a metà */
+    text-align: center; /* Centra il testo del footer per eleganza */
+    line-height: 1.6;
   }
-
-  /* 12 ─ Padding header ridotto */
-  .py-3.px-3 { padding: 0.4rem 0.5rem !important; }
 }
