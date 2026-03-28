@@ -322,3 +322,9 @@ html {
     line-height: 1.6;
   }
 }
+
+/* Rimpicciolisce la foto in Chi Sono solo su mobile */
+  .foto-profilo {
+    max-width: 45% !important; /* Puoi abbassare o alzare questa percentuale per regolare la grandezza */
+    height: auto !important;
+  }
