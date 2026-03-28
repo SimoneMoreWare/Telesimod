@@ -1,212 +1,213 @@
 <html lang="it">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/candidosimone.css">
 		<link rel="icon" href="img/favicon.ico" />
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
 		<script type="text/javascript" src="js/CandidoSimone_orario.js"></script>
-	    <script type="text/javascript" src="js/CandidoSimone_blink.js"></script>
-	    <script type="text/javascript" src="js/sendvalue.js"></script>
-
-		<title> TeLeSimod.it | Portfolio Simone Candido</title>
+		<script type="text/javascript" src="js/CandidoSimone_blink.js"></script>
+		<script type="text/javascript" src="js/sendvalue.js"></script>
+		<script type="text/javascript" src="js/lang.js"></script>
+		<script type="text/javascript" src="js/fit.js"></script>
+		<title>TeLeSimod.it | Portfolio Simone Candido</title>
 	</head>
-	
-	<body class="bg-black" onload="OrologioScorrevole()">
-			
+
+	<body class="bg-black" style="overflow:hidden; height:100vh; width:100vw;" onload="OrologioScorrevole(); setLang('it');">
+
 		<div class="container mx-auto md:px-20">
+
+			<!-- HEADER -->
 			<div class="c-header flex justify-between items-center align-middle text-center py-3 px-3 md:px-0">
-				<div class="flex w-1/2 justify-start">
+				<div class="flex w-1/2 justify-start" style="align-items:center; gap:0;">
 					<a href="index.html" style="display:flex;"><img src="img/home.svg" class="mr-3"></a>
+					<span style="width:12px;"></span><input style="margin:0; height:30px; width:40px; border:2px solid green; background-color:#282625; color:white;" id="refpage" type="text" name="text">
+					<button style="margin:0; height:30px; background-color:#282625; border:2px solid green; color:white;" type="button" onclick="refpage()">VAI</button>
 				</div>
-				<div style="display: flex; 	justify-content: space-between; padding-top: 4px; padding-right: 200px;" >
-					<input style=" margin:0; height:30px;  width:40px; border: 2px solid green;  background-color: #282625; color: white;			  " id="refpage" type="text" name="text">
-					<button style="margin:0; height:30px; 	background-color:#282625; border: 2px solid green; color:white; " type="button" onclick=refpage()>VAI</button>
-				</div>
-				  
-					<script src="js/sendvalue.js"></script>
-				<div class="flex justify-end">
-					<span style="text-align: left; font-size: 16px;" class="inline text-white text-xs lg:text-2xl">TELESIMOD &nbsp;</span>
-					<span style="text-align: left; font-size: 16px;" class="inline text-white text-xs lg:text-2xl" id="orologio">22/03/2020 11:58:49</span>
+				<script src="js/sendvalue.js"></script>
+				<div class="flex justify-end" style="align-items:center; gap:10px;">
+					<button onclick="setLang('it')" id="btn-it" style="background:#00FF00; color:black; border:none; padding:2px 7px; font-family:'Press Start 2P'; font-size:10px; cursor:pointer;">IT</button>
+					<button onclick="setLang('en')" id="btn-en" style="background:#282625; color:#00FF00; border:2px solid #00FF00; padding:2px 7px; font-family:'Press Start 2P'; font-size:10px; cursor:pointer;">EN</button>
+					<span style="font-size:16px;" class="inline text-white text-xs lg:text-2xl">TELESIMOD &nbsp;</span>
+					<span style="font-size:16px;" class="inline text-white text-xs lg:text-2xl" id="orologio">22/03/2020 11:58:49</span>
 				</div>
 			</div>
-			
+
 			<!-- LOGO -->
-	
-			<div class="c-logo flex justify-center align-middle text-center relative" style="  text-align: center;">
+			<div class="c-logo flex justify-center align-middle text-center relative" style="text-align:center;">
 				<div class="h-2/3 w-full bg-tele-blue absolute"></div>
-				<a href="index.html"><img src="img/logo1.png" style="padding-right: 10px;"alt="" class="z-10 px-6 pt-5"></a>
+				<a href="index.html" style="display:flex; justify-content:center; width:100%;"><img src="img/logo1.png" alt="" class="z-10 pt-5" style="padding:0; margin:0 auto;"></a>
 			</div>
-			
-            <!-- SUB-HEADER -->
-       
+
+			<!-- SUB-HEADER -->
 			<div class="flex flex-col md:flex-row mt-4">
-					<a class="bg-tele-blue text-white p-2 md:p-8 m-1 text-center" target="_blank">HOT PROJECT</a>
-				<div target="_blank" class="flex-auto bg-tele-green text-black p-2 md:p-8 m-1 text-center">
-					<a target="_blank">PORTFOLIO SIMONE CANDIDO</a>
+				<a class="bg-tele-blue text-white p-2 md:p-8 m-1 text-center" target="_blank" data-it="HOT PROJECT" data-en="HOT PROJECT">HOT PROJECT</a>
+				<div class="flex-auto bg-tele-green text-black p-2 md:p-8 m-1 text-center">
+					<a data-it="PORTFOLIO SIMONE CANDIDO" data-en="SIMONE CANDIDO PORTFOLIO">PORTFOLIO SIMONE CANDIDO</a>
 				</div>
 			</div>
-            
+
 			<!-- CONTENT -->
-			
 			<div class="flex flex-col lg:flex-row">
-			
-			<!-- DROPDOWN -->
-		
-				<div class="flex flex-col m-1 w-auto lg:w-2/3 md:pr-4">       
+
+				<!-- MAIN COLUMN -->
+				<div class="flex flex-col m-1 w-auto lg:w-2/3 md:pr-4">
 					<div class="mb-5">
 						<div class="flex align-middle m-2">
-							<div class=" border-2 text-tele-green w-20 my-auto mr-4"></div>
-							<div class="text-tele-green text-lg">23/07/2022</div>
+							<div class="border-2 text-tele-green w-20 my-auto mr-4"></div>
+							<div class="text-tele-green text-lg">2026-03-28</div>
 						</div>
-                    
+
+						<!-- PROJECT 1: NLoS 5G -->
 						<div class="flex flex-col md:flex-row m-1 mb-4">
 							<div class="flex flex-col w-full align-middle">
-								<div class="flex ">
+								<div class="flex">
+									<div class="text-white text-md lg:text-md md:mx-1">14:00<br><span style="color:grey;"></span></div>
+									<div class="w-full">
+										<div class="flex justify-between w-full text-md lg:text-md md:m-1">
+											<a href="https://github.com/SimoneMoreWare" target="_blank" class="bg-tele-yellow w-full hover:bg-tele-blue p-1" data-it="NLoS in 5G NR con Beta-VAE — xApp C++ su FlexRIC @ EURECOM" data-en="NLoS in 5G NR via Beta-VAE — C++ xApp on FlexRIC @ EURECOM">NLoS in 5G NR con Beta-VAE — xApp C++ su FlexRIC @ EURECOM</a>
+											<a class="ml-2 lg:text-sm bg-tele-aqua hover:bg-white p-1" data-it="Ricerca" data-en="Research">Ricerca</a>
+										</div>
+										<a target="_blank" class="text-tele-yellow md:pl-3" data-it="#5G #IA | Antibes" data-en="#5G #AI | Antibes">#5G #IA | Antibes</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- EDUCATION: Double Degree -->
+						<div class="flex flex-col md:flex-row m-1 mb-4">
+							<div class="flex flex-col w-full align-middle">
+								<div class="flex">
+									<div class="text-white text-md lg:text-md md:mx-1">15:00<br><span style="color:grey;"></span></div>
+									<div class="w-full">
+										<div class="flex justify-between w-full text-md lg:text-md md:m-1">
+											<a href="https://www.eurecom.fr" target="_blank" class="bg-tele-yellow w-full hover:bg-tele-blue p-1" data-it="MSc IoT Double Degree — EURECOM + PoliTo | GPA 18.29/20 | Top 5%" data-en="MSc IoT Double Degree — EURECOM + PoliTo | GPA 18.29/20 | Top 5%">MSc IoT Double Degree — EURECOM + PoliTo | GPA 18.29/20 | Top 5%</a>
+											<a class="ml-2 lg:text-sm bg-tele-aqua hover:bg-white p-1" data-it="MSc" data-en="MSc">MSc</a>
+										</div>
+										<a target="_blank" class="text-tele-yellow md:pl-3" data-it="#IoT #5G #6G | Antibes + Torino" data-en="#IoT #5G #6G | Antibes + Turin">#IoT #5G #6G | Antibes + Torino</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- PROJECT 3: Turin Toret Bot -->
+						<div class="flex flex-col md:flex-row m-1 mb-4">
+							<div class="flex flex-col w-full align-middle">
+								<div class="flex">
 									<div class="text-white text-md lg:text-md md:mx-1">16:00<br><span style="color:grey;"></span></div>
-								
 									<div class="w-full">
 										<div class="flex justify-between w-full text-md lg:text-md md:m-1">
-											<a href="https://t.me/turin_toret_bot" target="_blank" class="bg-tele-yellow w-full hover:bg-tele-blue p-1">Manda la tua posizione e riceverai qual è il toret più vicino</a>
-											<a class="ml-2 lg:text-sm bg-tele-aqua hover:bg-white p-1">Novità</a>
+											<a href="https://t.me/turin_toret_bot" target="_blank" class="bg-tele-yellow w-full hover:bg-tele-blue p-1" data-it="Turin Toret Bot — manda la posizione e trovi il toret più vicino" data-en="Turin Toret Bot — send your location and find the nearest fountain">Turin Toret Bot — manda la posizione e trovi il toret più vicino</a>
+											<a href="https://github.com/SimoneMoreWare/Turin_toret_bot" target="_blank" class="ml-2 lg:text-sm bg-tele-aqua hover:bg-white p-1" data-it="Open Source" data-en="Open Source">Open Source</a>
 										</div>
-											<a target="_blank" class="text-tele-yellow md:pl-3">#BotTelegram | Torino</a>
+										<a target="_blank" class="text-tele-yellow md:pl-3" data-it="#BotTelegram | Torino" data-en="#TelegramBot | Turin">#BotTelegram | Torino</a>
 									</div>
 								</div>
 							</div>
 						</div>
-					    
+
+						<!-- PROJECT 4: Stuff Happens -->
 						<div class="flex flex-col md:flex-row m-1 mb-4">
 							<div class="flex flex-col w-full align-middle">
 								<div class="flex">
-							
 									<div class="text-white text-md lg:text-md md:mx-1">17:00<br><span style="color:grey;"></span></div>
-								
 									<div class="w-full">
 										<div class="flex justify-between w-full text-md lg:text-md md:m-1">
-											<a href="https://www.instagram.com/p/CR6vTgNNmza/" target="_blank" class="bg-tele-yellow w-full hover:bg-tele-blue p-1">Insegniamo Arduino ai bambini Ortourbano Manfredonia</a>
-											<a href="https://www.moreware.org/wp/blog/tag/arduino-per-bambini/" class="ml-2 lg:text-sm bg-tele-aqua hover:bg-white p-1">Corso</a>
+											<a href="https://stuff-happens-web-app.vercel.app/" target="_blank" class="bg-tele-yellow w-full hover:bg-tele-blue p-1" data-it="Stuff Happens — gioco di carte full-stack con drag&amp;drop e timer anti-cheat" data-en="Stuff Happens — full-stack card game with drag&amp;drop and anti-cheat timer">Stuff Happens — gioco di carte full-stack con drag&amp;drop e timer anti-cheat</a>
+											<a href="https://github.com/SimoneMoreWare/Stuff-Happens-WebApp" target="_blank" class="ml-2 lg:text-sm bg-tele-aqua hover:bg-white p-1" data-it="Demo" data-en="Demo">Demo</a>
 										</div>
-											<a target="_blank" class="text-tele-yellow md:pl-3">#Arduino | Manfredonia</a>
+										<a target="_blank" class="text-tele-yellow md:pl-3" data-it="#React #NodeJS | PoliTo" data-en="#React #NodeJS | PoliTo">#React #NodeJS | PoliTo</a>
 									</div>
 								</div>
 							</div>
 						</div>
-						
-						<div class="flex flex-col md:flex-row m-1 mb-4">
-							<div class="flex flex-col w-full align-middle">
-								<div class="flex">
 
-									<div class="text-white text-md lg:text-md md:mx-1">18:00<br><span style="color:grey;"></span></div>
-								
-									<div class="w-full">
-										<div class="flex justify-between w-full text-md lg:text-md md:m-1">
-											<a target="_blank" href="https://www.hackher.it/hackhathon-2022/" class="bg-tele-yellow w-full hover:bg-tele-blue p-1">hackher: combattare la gender gap</a>
-											<a href="https://www.youtube.com/watch?v=9R9NtOpO0dI" class="ml-2 lg:text-sm bg-tele-aqua hover:bg-white p-1">Innovation</a>
-										</div>
-											<a target="_blank"  class="text-tele-yellow md:pl-3">#GenderGap | Milano</a>
-									</div>
-								</div>
-							</div>
-						</div>
-		     
-						<div class="flex flex-col md:flex-row m-1 mb-4">
-							<div class="flex flex-col w-full align-middle">
-								<div class="flex">
-
-									<div class="text-white text-md lg:text-md md:mx-1">18:30<br><span style="color:grey;"></span></div>
-								
-									<div class="w-full">
-										<div class="flex justify-between w-full text-md lg:text-md md:m-1">
-											<a href="https://www.instagram.com/p/CR6vTgNNmza/" target="_blank" class="bg-tele-yellow w-full hover:bg-tele-blue p-1">Impara a programmare con Arduino</a>
-											<a class="ml-2 lg:text-sm bg-tele-aqua hover:bg-white p-1">Corso</a>
-										</div>
-											<a target="https://www.moreware.org/wp/blog/tag/tutorial-arduino-ide/page/2/"  class=" text-tele-yellow md:pl-3">#ArduinoIde | Manfredonia</a>
-									</div>
-								</div>
-							</div>
-						</div>
-									 
 						<div class="mb-5">
 							<div class="flex align-middle m-2">
 								<div class="border-solid border-2 text-tele-green w-20 my-auto"></div>
 								<div class="text-tele-green text-lg"></div>
 							</div>
 						</div>
-                   </div>
+					</div>
 				</div>
-				
-				<div class="lg:flex flex-col m-1 w-1/3   hidden">
-					
+
+				<!-- SIDEBAR -->
+				<div class="lg:flex flex-col m-1 w-1/3 hidden">
+
 					<a href="chisono.html" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
 						<span class="text-red-600">100</span>
-						<span>Chi Sono?</span>
+						<span data-it=" Chi Sono?" data-en=" About Me?"> Chi Sono?</span>
 					</a>
-  
-                    <a href="https://www.instagram.com/simocandido/" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
+
+					<a href="https://www.instagram.com/simocandido/" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
 						<span class="text-red-600">101</span>
-						<span>Instagram</span>
+						<span> Instagram</span>
 					</a>
-                    
-					<a href="https://www.facebook.com/simone.candido.370" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
+
+					<a href="https://www.linkedin.com/in/simone-candido/" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
 						<span class="text-red-600">102</span>
-						<span>Facebook</span>
+						<span> LinkedIn</span>
 					</a>
-                    
-					<a href="https://www.linkedin.com/in/simone-candido-53b696146/" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
-						<span class="text-red-600">103</span>
-						<span>LinkedIn</span>
-					</a>
-                     
-					 <a href="https://twitter.com/SimoneCandido02" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
-						<span class="text-red-600">104</span>
-						<span>Twitter</span>
-					</a>
-                    
-					<a href="https://www.moreware.org/wp" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
-						<span class="text-red-600">105</span>
-						<span>Moreware</span>
-					</a>
-                    
+
 					<a href="https://github.com/SimoneMoreWare" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
+						<span class="text-red-600">103</span>
+						<span> GitHub</span>
+					</a>
+
+					<a href="https://twitter.com/SimoneCandido02" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
+						<span class="text-red-600">104</span>
+						<span> X / Twitter</span>
+					</a>
+
+					<a href="https://www.moreware.org/wp/blog/author/simonecandido/" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
+						<span class="text-red-600">105</span>
+						<span> Moreware Blog</span>
+					</a>
+
+					<a href="https://www.youtube.com/@simonecandido9425" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
 						<span class="text-red-600">106</span>
-						<span>Github</span>
+						<span> YouTube</span>
 					</a>
-                   
-					<a href="https://www.youtube.com/channel/UCFFSDYPL0-Fx6OvJD28GP8A" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
+
+					<a href="https://simonemoreware.github.io/portfolio-simonecandido/" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
 						<span class="text-red-600">107</span>
-						<span>Youtube</span>
+						<span data-it=" Nuovo Portfolio" data-en=" New Portfolio"> Nuovo Portfolio</span>
 					</a>
-                    
+
 					<a href="contatti.html" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
 						<span class="text-red-600">108</span>
-						<span>Contatti</span>
+						<span data-it=" Contatti" data-en=" Contacts"> Contatti</span>
 					</a>
-                    
+
 					<a href="https://www.moreware.org/books/PC_ita.epub" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
 						<span class="text-red-600">109</span>
-						<span>Come è fatto un PC</span>
+						<span data-it=" Come è fatto un PC" data-en=" How a PC works"> Come è fatto un PC</span>
 					</a>
-                    
-					<a href="https://drive.google.com/file/d/1ANVWqTSd2ifxHXZ7V_Z5zY4We8mdBveH/view?usp=sharing	" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue ">
+
+					<a href="cv/cv_simoneCandido.pdf" target="_blank" class="text-left text-lg bg-white px-4 py-2 hover:bg-tele-blue">
 						<span class="text-red-600">110</span>
-						<span>CV</span>
+						<span> CV</span>
 					</a>
-                </div>
+				</div>
 			</div>
-			
+
 			<!-- DISCLAIMER -->
-			
-			
-			<a  style="display:block;" href="https://www.canva.com/design/DAE5zUxmb3w/pqhQ-u14eqhPaHc0cIeYGA/view?utm_content=DAE5zUxmb3w&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" target="_blank" class="bg-tele-blue p-1 m-1 text-white lg:text-2xl text-center"><p  script="js/blink.js" id="blink" class="p-1 m-1 text-white lg:text-2xl text-center">Come AI genera opere d'arte <span class="text-tele-green text-lg md:text-4xl">86</p></span></a>
-            <span class="blue whitebg" v-if="progress < 100">Loading {{ progress}} / 100</span>
+			<a style="display:block;" href="https://simonemoreware.github.io/portfolio-simonecandido/" target="_blank" class="bg-tele-blue p-1 m-1 text-white lg:text-2xl text-center">
+				<p id="blink" class="p-1 m-1 text-white lg:text-2xl text-center" style="white-space:nowrap; overflow:hidden;" data-it="Visita il nuovo portfolio completo &nbsp;<span class='text-tele-green text-lg md:text-4xl'>107</span>" data-en="Visit the full new portfolio &nbsp;<span class='text-tele-green text-lg md:text-4xl'>107</span>">Visita il nuovo portfolio completo &nbsp;<span class="text-tele-green text-lg md:text-4xl">107</span></p>
+			</a>
+
 			<!-- FOOTER -->
-			
 			<div class="flex items-center sm:flex-row justify-between align-middle py-4 px-4">
-				<h1 class="text-white text-md lg:text-2xl" id="blink">www.TeleSimod.it <a href="manfredonia.html" target="_blank" style="color:red;"> Manfredonia</a><span style="color:red;">\Torino</span></h1>
-				<a href="chisono.html" target="_blank" class="text-red-600 text-md lg:text-lg md:mt-0 hover:text-red-600">&gt;</a>
+				<h1 class="text-white text-md lg:text-2xl" id="blink2" style="white-space:nowrap; font-size:1.4rem;">www.TeleSimod.it <a href="manfredonia.html" target="_blank" style="color:red;">Manfredonia</a><span style="color:red;">\Torino\Antibes</span> <a href="chisono.html" target="_blank" style="color:#e53e3e;">&gt;</a></h1>
 			</div>
 		</div>
+
+		<script>
+		// blink for footer too
+		var blink2 = setInterval(function () {
+			var ele = document.getElementById('blink2');
+			if (ele) ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+		}, 1000);
+		</script>
 	</body>
 </html>

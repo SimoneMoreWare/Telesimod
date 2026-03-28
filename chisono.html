@@ -1,68 +1,65 @@
-<html lang="en">
+<html lang="it">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/candidosimone.css">
 		<link rel="icon" href="img/favicon.ico" />
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
 		<script type="text/javascript" src="js/CandidoSimone_orario.js"></script>
 		<script type="text/javascript" src="js/CandidoSimone_blink.js"></script>
-		
-		<title> TeLeSimod.it | Portfolio Simone Candido</title>
+		<script type="text/javascript" src="js/lang.js"></script>
+		<script type="text/javascript" src="js/fit.js"></script>
+		<title>TeLeSimod.it | Portfolio Simone Candido</title>
 	</head>
-	
-	<body class="bg-black" onload="OrologioScorrevole()">
+
+	<body class="bg-black" style="overflow:hidden; height:100vh; width:100vw;" onload="OrologioScorrevole(); setLang('it');">
 		<div class="container mx-auto md:px-20">
+
+			<!-- HEADER -->
 			<div class="c-header flex justify-between items-center align-middle text-center py-3 px-3 md:px-0">
-				<div class="flex w-1/2 justify-start">
+				<div class="flex w-1/2 justify-start" style="align-items:center; gap:0;">
 					<a href="index.html" style="display:flex;"><img src="img/home.svg" class="mr-3"></a>
+					<span style="width:12px;"></span><input style="margin:0; height:30px; width:40px; border:2px solid green; background-color:#282625; color:white;" id="refpage" type="text" name="text">
+					<button style="margin:0; height:30px; background-color:#282625; border:2px solid green; color:white;" type="button" onclick="refpage()">VAI</button>
 				</div>
-				<div style="display: flex; 	justify-content: space-between; padding-top: 4px; padding-right: 200px;" >
-					<input style=" margin:0; height:30px;  width:40px; border: 2px solid green;  background-color: #282625; color: white;			  " id="refpage" type="text" name="text">
-					<button style="margin:0; height:30px; 	background-color:#282625; border: 2px solid green; color:white; " type="button" onclick=refpage()>VAI</button>
+				<script src="js/sendvalue.js"></script>
+				<div class="flex justify-end" style="align-items:center; gap:10px;">
+					<button onclick="setLang('it')" id="btn-it" style="background:#00FF00; color:black; border:none; padding:2px 7px; font-family:'Press Start 2P'; font-size:10px; cursor:pointer;">IT</button>
+					<button onclick="setLang('en')" id="btn-en" style="background:#282625; color:#00FF00; border:2px solid #00FF00; padding:2px 7px; font-family:'Press Start 2P'; font-size:10px; cursor:pointer;">EN</button>
+					<span style="font-size:16px;" class="inline text-white text-xs lg:text-2xl">TELESIMOD &nbsp;</span>
+					<span style="font-size:16px;" class="inline text-white text-xs lg:text-2xl" id="orologio">22/03/2020 11:58:49</span>
 				</div>
-				  
-					<script src="js/sendvalue.js"></script>
-					<div class="flex justify-end">
-						<span style="text-align: left; font-size: 16px;" class="inline text-white text-xs lg:text-2xl">TELESIMOD &nbsp;</span>
-						<span style="text-align: left; font-size: 16px;" class="inline text-white text-xs lg:text-2xl" id="orologio">22/03/2020 11:58:49</span>
-					</div>
 			</div>
-			
+
 			<!-- LOGO -->
-	
 			<div class="c-logo flex justify-center align-middle text-center relative">
 				<div class="h-2/3 w-full bg-tele-blue absolute"></div>
-				<a href="index.html"><img src="img/logo1.png" alt="" class="z-10 px-6 pt-5"></a>
+				<a href="index.html" style="display:flex; justify-content:center; width:100%;"><img src="img/logo1.png" alt="" class="z-10 pt-5" style="padding:0; margin:0 auto;"></a>
 			</div>
-			
-            <!-- SUB-HEADER -->
-       
-			<div class="flex flex-col md:flex-row mt-4">	
-				<div target="_blank" class="flex-auto bg-tele-green text-black p-2 md:p-8 m-1 text-center">
-					<a  style="font-size: 150%;">CHI SONO?</a>
+
+			<!-- SUB-HEADER -->
+			<div class="flex flex-col md:flex-row mt-4">
+				<div class="flex-auto bg-tele-green text-black p-2 md:p-8 m-1 text-center">
+					<a style="font-size:150%;" data-it="CHI SONO?" data-en="ABOUT ME?">CHI SONO?</a>
 				</div>
 			</div>
-            
+
 			<!-- CONTENT -->
-			
-
-			<div style="display:inline-block;vertical-align:top;">
-				<img src="img/pic.png" style="float: left;">			
-				<p style="color:white; font-size: 150%;" >
-					Ciao, sono Simone Candido e studio ingegneria informatica presso il Politecnico di Torino. Sono un ragazzo appassionato dell'informatica, in particolar modo del mondo hardware e della programmazione. Realizzo le idee che mi passano per la testa e sono sempre in continua ricerca di migliorarmi sempre di più ampliando le conoscenze e la cerchia di persona al mio fianco.</p>
-			<!-- DISCLAIMER -->
+			<div style="display:inline-block; vertical-align:top;">
+				<img src="img/pic.png" style="float:left;">
+				<p style="color:white; font-size:130%;" data-it="Ciao, sono Simone Candido, ingegnere informatico al Politecnico di Torino. Sto seguendo un Double Degree MSc tra PoliTo (Computer Engineering) ed EURECOM (IoT &amp; Wireless Communications, Sophia Antipolis), con specializzazione su 5G/6G. Ho conseguito la triennale in Ingegneria Informatica con 108/110. Sono appassionato di IoT, sviluppo full-stack, reti wireless e sistemi embedded." data-en="Hi, I'm Simone Candido, a Computer Engineering student at Politecnico di Torino. I'm pursuing a Double Degree MSc between PoliTo (Computer Engineering) and EURECOM (IoT &amp; Wireless Communications, Sophia Antipolis), specializing in 5G/6G networks. I graduated BSc in Computer Engineering with 108/110. Passionate about IoT, full-stack development, wireless networks and embedded systems.">
+					Ciao, sono Simone Candido, ingegnere informatico al Politecnico di Torino. Sto seguendo un Double Degree MSc tra PoliTo (Computer Engineering) ed EURECOM (IoT &amp; Wireless Communications, Sophia Antipolis), con specializzazione su 5G/6G. Ho conseguito la triennale in Ingegneria Informatica con 108/110. Sono appassionato di IoT, sviluppo full-stack, reti wireless e sistemi embedded.
+				</p>
 			</div>
-		
 
-			<a  style="display:block;" href="https://www.canva.com/design/DAE5zUxmb3w/pqhQ-u14eqhPaHc0cIeYGA/view?utm_content=DAE5zUxmb3w&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu" target="_blank" class="bg-tele-blue p-1 m-1 text-white lg:text-2xl text-center"><p  script="js/blink.js" id="blink" class="p-1 m-1 text-white lg:text-2xl text-center">Come AI genera opere d'arte <span class="text-tele-green text-lg md:text-4xl">86</p></span></a>
-			
+			<!-- DISCLAIMER -->
+			<a style="display:block;" href="https://simonemoreware.github.io/portfolio-simonecandido/" target="_blank" class="bg-tele-blue p-1 m-1 text-white lg:text-2xl text-center">
+				<p id="blink" class="p-1 m-1 text-white lg:text-2xl text-center" data-it="Visita il nuovo portfolio completo <span class='text-tele-green text-lg md:text-4xl'>107</span>" data-en="Visit the full new portfolio <span class='text-tele-green text-lg md:text-4xl'>107</span>">Visita il nuovo portfolio completo <span class="text-tele-green text-lg md:text-4xl">107</span></p>
+			</a>
+
 			<!-- FOOTER -->
-			
 			<div class="flex items-center sm:flex-row justify-between align-middle py-4 px-4">
-				<h1 class="text-white text-md lg:text-2xl" id="blink">www.TeleSimod.it <a href="manfredonia.html" target="_blank" style="color:red;"> Manfredonia</a><span style="color:red;">\Torino</span></h1>
-				<a href="index.html" target="_blank" class="text-red-600 text-md lg:text-lg md:mt-0 hover:text-red-600">&gt;</a>
+				<h1 class="text-white text-md lg:text-2xl" id="blink" style="white-space:nowrap; font-size:1.4rem;">www.TeleSimod.it <a href="manfredonia.html" target="_blank" style="color:red;">Manfredonia</a><span style="color:red;">\Torino\Antibes</span> <a href="index.html" target="_blank" style="color:#e53e3e;">&gt;</a></h1>
 			</div>
 		</div>
 	</body>
