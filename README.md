@@ -20,6 +20,7 @@ I never threw it away. I got attached to it. Over the years I kept updating it w
 ├── contatti.html       # Contacts page
 ├── error404.html       # 404 error page
 ├── manfredonia.html    # Manfredonia easter egg page
+├── pako.html           # Pako easter egg page
 ├── cv/
 │   └── cv_simoneCandido.pdf    # CV / Resume
 ├── css/
