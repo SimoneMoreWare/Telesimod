@@ -10,7 +10,7 @@ I never threw it away. I got attached to it. Over the years I kept updating it w
 
 ## Live Site
 
-[www.telesimod.it](https://simonemoreware.github.io/TeleSimod/) *(GitHub Pages)*
+[www.telesimod.it](https://simonemoreware.github.io/Telesimod/) *(GitHub Pages)*
 
 ## Structure
 
