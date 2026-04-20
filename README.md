@@ -43,7 +43,7 @@ I never threw it away. I got attached to it. Over the years I kept updating it w
 
 - **Teletext aesthetic** — classic black background with green, yellow, blue and cyan colors, `Press Start 2P` pixel font
 - **Live clock** — real-time date/time in the header, updated every second
-- **Page number navigation** — type a number (100–110) and press VAI to navigate, just like a real teletext terminal
+- **Page number navigation** — type a number (100–110) and press GO to navigate, just like a real teletext terminal
 - **Blinking elements** — footer text blinks in true teletext style
 - **Bilingual** — toggle between Italian 🇮🇹 and English 🇬🇧 with the IT/EN buttons
 - **No-scroll fullscreen** — auto-scales to fit any screen without scrolling (`fit.js`)
